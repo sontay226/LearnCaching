@@ -12,12 +12,17 @@ public class Program
             options.InstanceName = "MyRedisCache"; // phan biet cac redis ( neu co nhieu redis khac nhau )
         });
         builder.Services.AddSingleton<HomeWork_1>(); // register homework_1 as singleton
+        builder.Services.AddSingleton<HomeWork_2>(); // register homework_2 as singleton
         
         var app = builder.Build(); // build app from builder
         app.MapGet("/products", async (HomeWork_1 homework) => // get redis
         {
-            var products = await homework.GetDataAsync(); // goi method GetDataAsync => list product
+            var products = await homework.GetProductAsync(); // goi method GetDataAsync => list product
             return Results.Json(products); // tra ve danh sach product duoi dang Json , do redis khong co kieu tra ve list
+        });
+        app.MapGet ( "/orders" , async ( HomeWork_2 homeWork) => {
+            var orders = await homeWork.GetOrdersAsync();
+            return Results.Json(orders);
         });
         app.Run(); // chay app
     }

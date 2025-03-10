@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyCachingApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36701ba533d77d3bc0d299da9641eb223c77d76b")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyCachingApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyCachingApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

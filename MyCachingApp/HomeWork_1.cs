@@ -11,7 +11,7 @@ public class HomeWork_1
         new Product { Id = 1, Name = "Apple", Price = 1 },
         new Product { Id = 2, Name = "Banana", Price = 2 }
     };
-    public async Task<List<Product>> GetDataAsync() { // func lay danh sach san pham
+    public async Task<List<Product>> GetProductAsync() { // func lay danh sach san pham
         string cacheKey = "products"; // key cache save list prodct 
         var cacheData = await _cache.GetStringAsync(cacheKey); // lay data tu cache
         if (cacheData != null) {
